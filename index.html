@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainable Fishing Simulator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="header">
+    <h1>Sustainable Fishing Simulator</h1>
+  </header>
+  <div id="seasonBadge"></div>
+  <main>
+    <section class="stats">
+      <h2>Company Stats</h2>
+      <p>Fish Caught Today: <span id="fishCaughtToday">0</span></p>
+      <p>Ecosystem Health: <span id="ecoHealth">100%</span></p>
+      <p>Money: $<span id="money">0</span></p>
+      <p id="season">Current Season: Winter</p>
+    </section>    
+    <section class="map">
+      <h2>Fishing Area</h2>
+      <div id="fishingMap">
+        <!-- Fishing zones will be dynamically generated -->
+      </div>
+      <div id="event-notification"></div>
+      <div id="challengeDisplay" style="display: none;">
+        <h3 id="challengeTitle"></h3>
+        <div id="challengeProgressContainer">
+          <div id="challengeProgressBar"></div>
+        </div>
+        <p id="challengeTimer"></p>
+      </div>
+      
+      
+    </section>
+    <section class="upgrades">
+      <h2>Upgrades</h2>
+      <button id="buyFishingRod">Upgrade Fishing Rod - $50</button>
+      <span id="fishingRodLevel">Level: 1</span>
+      <br>
+      <button id="buyEcoBoat">Upgrade Eco Boat - $100</button>
+      <span id="ecoBoatLevel">Level: 0</span>
+    </section>
+    <button id="endDayButton">End Day</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

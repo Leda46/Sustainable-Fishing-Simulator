@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e0f7fa;
+  }
+  header {
+    background: #00796b;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    transition: background 0.3s;
+  }
+  main {
+    padding: 2em;
+  }
+  .stats, .map, .upgrades {
+    margin: 1em 0;
+  }
+  #fishingMap {
+    max-width: 400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+  }
+  .zone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-weight: bold;
+    font-size: 1.2em;
+    background: #80cbc4; /* Water color */
+    transition: background 0.3s;
+  }
+  .zone:hover {
+    background: #4db6ac; /* Highlighted water */
+  }
+  .zone[data-fish="0"] {
+    background: #e57373; /* Red for no fish */
+  }
+  .zone[data-fish="1"],
+  .zone[data-fish="2"] {
+    background: #ffcc80; /* Orange for low fish */
+  }
+  .upgrades button {
+    margin: 5px;
+    padding: 10px;
+    background: #00796b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .upgrades button:hover {
+    background: #004d40;
+  }
+  #seasonBadge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: #4db6ac; /* Add a base background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    transition: background-image 0.5s ease, background-color 0.5s ease;
+  }
+
+  #event-notification {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  display: none;
+  z-index: 1000;
+}
+
+#challengeProgressContainer {
+width: 100%;
+background-color: #ddd;
+height: 20px;
+border-radius: 10px;
+margin: 10px 0;
+}
+
+#challengeProgressBar {
+height: 20px;
+width: 0;
+background-color: #4caf50;
+border-radius: 10px;
+transition: width 0.2s;
+}
