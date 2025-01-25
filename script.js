@@ -41,7 +41,7 @@ let fishCaughtToday = 0;
     { type: "negative", message: "Pollution incident! Reduce ecosystem health.", effect: () => decreaseSustainability(10) },
 ];
 
-// Example fish population array
+// Fish population array
 const fish = [
   { type: "Salmon", zone: "north", value: 10 },
   { type: "Tuna", zone: "south", value: 15 },
@@ -54,8 +54,8 @@ let challengeActive = false;
 let challengeType = "";
 let challengeTimer = 0;
 let challengeGoal = 0;
-let challengeReward = 100; // Example reward amount
-let challengeGoalInitial; // Define the variable at the top with other global variables
+let challengeReward = 100; // Reward amount
+let challengeGoalInitial;
 
 
 function startChallenge(type) {
@@ -79,7 +79,7 @@ function startChallenge(type) {
     challengeTimer = 25; // 25 seconds
     challengeGoal = 150; // Earn $150 in 25 seconds
     challengeReward = 150; // Reward
-    challengeGoalInitial = challengeGoal; // Set initial goal for progress tracking
+    challengeGoalInitial = challengeGoal;
     document.getElementById("challengeTitle").textContent = `Challenge: Earn $150 in under 25 seconds!`;
   }
 
@@ -261,7 +261,7 @@ function decreaseSustainability(points) {
                 ecoHealthEl.textContent = `${ecoHealth}%`;
           
             } else {
-                handleChallengeFishCatch(fishInThisZone); // Pass the correct fish object
+                handleChallengeFishCatch(fishInThisZone);
                 fishInZone--;
                 fishCaughtToday++;
                 ecoHealth -= 1; // Decrease ecosystem health
@@ -288,7 +288,7 @@ function decreaseSustainability(points) {
 
     createFishingZones();
 
-    // Update Header based on Ecosystem Health
+    // Update header based on Ecosystem Health
     function updateHeader() {
       if (ecoHealth > 50) {
         header.style.background = '#00796b';
@@ -335,7 +335,7 @@ function decreaseSustainability(points) {
         currentSeasonIndex = (currentSeasonIndex + 1) % seasons.length;
         const currentSeason = seasons[currentSeasonIndex];
         updateSeasonEffect(currentSeason);
-        seasonEl.textContent = `Current Season: ${currentSeason}`;  // Update season text here
+        seasonEl.textContent = `Current Season: ${currentSeason}`;  // Update season text
       }
     }
 
